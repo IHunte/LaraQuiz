@@ -1,3 +1,31 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+.body {
+    @apply bg-body;
+}
+
+.title {
+    @apply flex items-center justify-center mb-20;
+}
+
+.title-header {
+    @apply text-8xl text-title font-medium;
+}
+
+.card {
+    @apply bg-card shadow-lg rounded-lg overflow-hidden pb-4;
+}
+
+.question {
+    @apply text-question text-lg px-6 py-4 font-bold;
+}
+
+.item {
+    @apply rounded-lg p-4 bg-items hover:bg-hover-item font-semibold;
+}
+
+.space-between-items {
+    @apply px-6 py-2;
+}
