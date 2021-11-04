@@ -11,7 +11,7 @@
 </head>
 <body class="body">
 
-    <div class="flex items-center justify-center h-screen">
+    <div id="vue-app" class="flex items-center justify-center h-screen">
 
         <div class="w-3/6 flex flex-col">
             <div class="title">
@@ -20,35 +20,17 @@
                 </h1>
             </div>
 
-            <div class="card">
+            <div v-if="currentQ <= Count_Questions()" class="card">
                 <div class="question">
-                    What is the current version of Laravel ?
+                    {{ questions[currentQ]['q'] }}
                 </div>
             
-                <div class="space-between-items">
+                <div v-for="(answer, index) in questions[currentQ].answers" class="space-between-items">
                   <div class="item">
-                    Here is a short comment about this employee.
+                    {{ answer }}
                   </div>
                 </div>
 
-                <div class="space-between-items">
-                  <div class="item">
-                    Here is a short comment about this employee.
-                  </div>
-                </div>
-
-                <div class="space-between-items">
-                  <div class="item">
-                    Here is a short comment about this employee.
-                  </div>
-                </div>
-                
-                <div class="space-between-items">
-                  <div class="item">
-                    Here is a short comment about this employee.
-                  </div>
-                </div>
-            
             </div>
         </div>
 
