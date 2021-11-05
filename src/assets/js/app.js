@@ -5,6 +5,7 @@ import '../css/style.css'
 new Vue({
     el: '#vue-app',
     data: {
+        started: false,
         correct_answers: 0,
         wrong_answers: 0,
         currentQ: 0,
@@ -57,6 +58,9 @@ new Vue({
         },
         SelectedItem(index) {
             return this.selected_answer == index && this.selected_answer != this.questions[this.currentQ].correct_answer ? 'selectedIndex' : '';
+        },
+        Start() {
+            this.started = true;
         }
     },
     computed: { 

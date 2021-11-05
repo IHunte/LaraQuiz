@@ -8,6 +8,30 @@
 
     <link rel="stylesheet" href="/src/assets/css/style.css">
     
+    <style>
+        .pushable {
+          background: hsl(340deg 100% 32%);
+          border-radius: 12px;
+          border: none;
+          padding: 0;
+          cursor: pointer;
+          outline-offset: 4px;
+        }
+        .front {
+          display: block;
+          padding: 12px 42px;
+          border-radius: 12px;
+          font-size: 1.25rem;
+          background: #FE6847;
+          color: #E5F2C9;
+          transform: translateY(-6px);
+          font-weight: bold;
+        }
+      
+        .pushable:active .front {
+          transform: translateY(-2px);
+        }
+      </style>
 </head>
 <body class="body">
 
@@ -20,7 +44,13 @@
                 </h1>
             </div>
 
-            <div v-if="currentQ < Count_Questions()" class="card">
+            <div v-if="started == false" class="m-auto">
+                <button class="pushable" @click="Start()">
+                    <span class="front">START</span>
+                </button>
+            </div>
+
+            <div v-else-if="currentQ < Count_Questions()" class="card">
                 <div class="question">
                     {{ questions[currentQ]['q'] }}
                 </div>
