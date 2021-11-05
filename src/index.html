@@ -20,16 +20,23 @@
                 </h1>
             </div>
 
-            <div v-if="currentQ <= Count_Questions()" class="card">
+            <div v-if="currentQ < Count_Questions()" class="card">
                 <div class="question">
                     {{ questions[currentQ]['q'] }}
                 </div>
-            
-                <div v-for="(answer, index) in questions[currentQ].answers" class="space-between-items">
-                  <div class="item">
-                    {{ answer }}
-                  </div>
-                </div>
+
+                <label v-for="(answer, index) in questions[currentQ].answers" :key="index" :for="index"
+                    class="item" 
+                    :class="[
+                                Basic,
+                                ShowCorrectAnswer(index),
+                                SelectedItem(index),
+                            ]">
+                    
+                <input :id="index" type="radio" class="hidden" :value="index" @change="nextQuestion($event)"
+                                :disabled="selected_answer != ''">
+                            {{answer}}
+                </label>
 
             </div>
         </div>

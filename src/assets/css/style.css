@@ -23,9 +23,18 @@
 }
 
 .item {
-    @apply rounded-lg p-4 bg-items hover:bg-hover-item font-semibold;
+    @apply block rounded-lg p-4 font-semibold bg-items m-3;
 }
 
-.space-between-items {
-    @apply px-6 py-2;
+.default_style {
+    @apply hover:bg-hover-item cursor-pointer;
+
+}
+
+.selectedIndex {
+    @apply bg-red-400;
+}
+
+.CorrectAnswer{
+    @apply bg-green-600;
 }

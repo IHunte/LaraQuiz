@@ -605,6 +605,10 @@ video {
   display: flex;
 }
 
+.hidden {
+  display: none;
+}
+
 .h-screen {
   height: 100vh;
 }
@@ -623,6 +627,11 @@ video {
 
 .justify-center {
   justify-content: center;
+}
+
+.text-green-800 {
+  --tw-text-opacity: 1;
+  color: rgba(6, 95, 70, var(--tw-text-opacity));
 }
 
 .body {
@@ -668,6 +677,8 @@ video {
 }
 
 .item {
+  margin: 0.75rem;
+  display: block;
   border-radius: 0.5rem;
   --tw-bg-opacity: 1;
   background-color: rgba(229, 242, 201, var(--tw-bg-opacity));
@@ -675,14 +686,21 @@ video {
   font-weight: 600;
 }
 
-.item:hover {
+.default_style {
+  cursor: pointer;
+}
+
+.default_style:hover {
   --tw-bg-opacity: 1;
   background-color: rgba(239, 189, 235, var(--tw-bg-opacity));
 }
 
-.space-between-items {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+.selectedIndex {
+  --tw-bg-opacity: 1;
+  background-color: rgba(248, 113, 113, var(--tw-bg-opacity));
+}
+
+.CorrectAnswer {
+  --tw-bg-opacity: 1;
+  background-color: rgba(5, 150, 105, var(--tw-bg-opacity));
 }
