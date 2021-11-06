@@ -61,6 +61,13 @@ new Vue({
         },
         Start() {
             this.started = true;
+        },
+        Reset() {
+            this.started = false;
+            this.currentQ = 0;
+            this.correct_answers = 0;
+            this.wrong_answers = 0;
+            this.selected_answer = '';
         }
     },
     computed: { 

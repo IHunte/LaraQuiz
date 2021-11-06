@@ -46,7 +46,7 @@
 
             <div v-if="started == false" class="m-auto">
                 <button class="pushable" @click="Start()">
-                    <span class="front">START</span>
+                    <span class="front tracking-widest">START</span>
                 </button>
             </div>
 
@@ -68,6 +68,21 @@
                             {{answer}}
                 </label>
 
+            </div>
+
+            <div v-else class="card">
+                <div class="m-3 text-title font-bold text-center">
+                    <h2 class="text-3xl tracking-widest">SCORE</h2>
+                    <div class="mt-8">
+                        <p>Correct : {{ correct_answers }}</p>
+                        <p>Wrong : {{ wrong_answers }}</p>
+                    </div>
+                    <div class="mt-8">
+                        <button class="pushable" @click="Reset">
+                            <span class="front tracking-widest">RESET</span>
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
 
