@@ -42,8 +42,6 @@ new Vue({
                 this.wrong_answers++
             }
 
-            console.log(this.currentQ + '||' + this.selected_answer);
-
             setTimeout(function()
             {
                 this.currentQ++;
