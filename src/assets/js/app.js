@@ -17,14 +17,14 @@ new Vue({
                 correct_answer: 'd',
             },
             {
-                q: 'Q2 ?',
-                answers: { a: '1', b: '2', c: '3', d: '4' },
-                correct_answer: 'd',
+                q: 'What is the PHP ORM used in Laravel ?',
+                answers: { a: 'Propel', b: 'Doctrine', c: 'Eloquent', d: 'RedBeanPHP' },
+                correct_answer: 'c',
             },
             {
-                q: 'Q3 ?',
-                answers: { a: 'A', b: 'B', c: 'C', d: 'D' },
-                correct_answer: 'd',
+                q: 'What is the template engine used in Laravel ?',
+                answers: { a: 'Twig', b: 'Blade', c: 'Mustache', d: 'Volt' },
+                correct_answer: 'b',
             },
 
         ],
