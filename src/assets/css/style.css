@@ -38,3 +38,7 @@
 .CorrectAnswer{
     @apply bg-green-600;
 }
+
+.svg_icon {
+    @apply hover:stroke-current hover:text-title;
+}
