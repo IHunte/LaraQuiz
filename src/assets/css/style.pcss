@@ -1,0 +1,44 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.body {
+    @apply bg-body;
+}
+
+.title {
+    @apply flex items-center justify-center mb-20;
+}
+
+.title-header {
+    @apply text-8xl text-title font-medium;
+}
+
+.card {
+    @apply bg-card shadow-lg rounded-lg overflow-hidden pb-4;
+}
+
+.question {
+    @apply text-question text-lg px-6 py-4 font-bold;
+}
+
+.item {
+    @apply block rounded-lg p-4 font-semibold bg-items m-3;
+}
+
+.default_style {
+    @apply hover:bg-hover-item cursor-pointer;
+
+}
+
+.selectedIndex {
+    @apply bg-red-400;
+}
+
+.CorrectAnswer{
+    @apply bg-green-600;
+}
+
+.svg_icon {
+    @apply hover:stroke-current hover:text-title;
+}
